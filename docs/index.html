@@ -52,8 +52,9 @@
         }
         
         var postData = {
-            rawdata: data,
-            fulladdr : fullRoadAddr
+          addrOk: true,
+          fulladdr : fullRoadAddr,
+          rawdata: data
         };
         
         window.parent.postMessage(postData, "*");
