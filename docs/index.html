@@ -10,10 +10,6 @@
 
 <script src="https://spi.maps.daum.net/imap/map_js_init/postcode.v2.js"></script>
 <script>
-  function postMessageToParent(postData) {
-      window.parent.postMessage(postData, "*");
-  };
-  
   var element_layer = document.getElementById('layer');
   
   function execDaumPostcode() {
@@ -60,7 +56,7 @@
             addr : fullRoadAddr
         };
         
-        window.postMessageToParent(postData);
+        window.parent.postMessage(postData, "*");
       },
       width : '100%',
       height : '100%'
